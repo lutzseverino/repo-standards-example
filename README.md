@@ -37,10 +37,10 @@ Commands require a compatible published CLI version.
 
 ```sh
 repo-standards inspect --source https://github.com/lutzseverino/repo-standards-example \
-  --standards-version v1.1.0 --profile service --project /path/to/project --json
+  --standards-version v2.0.0 --profile service --project /path/to/project --json
 ```
 
-Use stable release tag `v1.1.0` and complete profile `service` or `work`.
+Use stable release tag `v2.0.0` and complete profile `service` or `work`.
 The original service-only `v1.0.0` release remains unchanged. Inspection is read-only and
 executes no source scripts. Adoption requires a separate explicit confirmation.
 The `repo-standards` topic also makes published stable releases discoverable
