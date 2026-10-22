@@ -10,7 +10,7 @@ or a claim of production operational readiness.
 The `service` profile installs an exact `.editorconfig` and guides an agent to
 write project-specific operational documentation. A repeat-safe Node.js fix
 initializes an unverified status record; a separate check verifies required
-runbook sections and status. The operations require Node.js 24. Review the
+runbook sections and status. The operations require Node.js 24 or 26. Review the
 scripts before confirming adoption: they run as trusted code on your machine.
 
 The `work` profile selects Alice's work-specific `AGENTS.md`, exact review skill,
@@ -29,7 +29,8 @@ With an installed compatible Repository Standards CLI:
 repo-standards source validate . --json
 ```
 
-The declared CLI compatibility range is `>=1.0.0 <2.0.0`. See the product's
+The declared CLI compatibility range is `>=9.0.0`. The operations use
+`repo-standards/operation/v2` requests and `repo-standards/result/v2` results. See the product's
 [public installation instructions](https://github.com/lutzseverino/repo-standards/blob/main/docs/installation.md).
 Commands require a compatible published CLI version.
 
@@ -37,11 +38,12 @@ Commands require a compatible published CLI version.
 
 ```sh
 repo-standards inspect --source https://github.com/lutzseverino/repo-standards-example \
-  --standards-version v2.0.0 --profile service --project /path/to/project --json
+  --standards-version v3.0.0 --profile service --project /path/to/project --json
 ```
 
-Use stable release tag `v2.0.0` and complete profile `service` or `work`.
-The original service-only `v1.0.0` release remains unchanged. Inspection is read-only and
+Use stable release tag `v3.0.0` and complete profile `service` or `work`.
+Earlier releases remain unchanged. Select CLI 9.0.0 or newer when adopting
+v3.0.0; Python >=3.12,<4 remains required for the `work` profile. Inspection is read-only and
 executes no source scripts. Adoption requires a separate explicit confirmation.
 The `repo-standards` topic also makes published stable releases discoverable
 through `repo-standards source search --json`.

@@ -2,7 +2,7 @@ format: repo-standards/v2
 name: repository-standards-examples
 description: Synthetic service and project-documentation profiles for release acceptance
 requires:
-  repo-standards: ">=1.2.0"
+  repo-standards: ">=9.0.0"
 defaults:
   declarations:
     editor-settings:
@@ -27,7 +27,7 @@ defaults:
           prerequisite:
             version-arguments:
               - --version
-            version: ">=24.0.0 <25.0.0"
+            version: ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
           timeout-seconds: 10
       checks:
         - id: operational-evidence
@@ -40,7 +40,7 @@ defaults:
           prerequisite:
             version-arguments:
               - --version
-            version: ">=24.0.0 <25.0.0"
+            version: ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
           timeout-seconds: 10
     agent-guidance:
       kind: file
